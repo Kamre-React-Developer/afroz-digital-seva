@@ -4,8 +4,8 @@ import Container from '../common/Container'
 const navigationLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Services', href: '#services' },
-  { label: 'Bihar Government', href: '#bihar-services' },
-  { label: 'Central Government', href: '#central-services' },
+  { label: 'Bihar Government', href: '#bihar-government'},
+  { label: 'Central Government', href: '#central-government' },
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Contact', href: '#contact' },
 ]
