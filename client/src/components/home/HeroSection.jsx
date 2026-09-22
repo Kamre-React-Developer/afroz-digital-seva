@@ -83,10 +83,11 @@ function HeroSection() {
   }
 
   return (
-    <section
-      id="home"
-      className="relative mb-28 scroll-mt-10 overflow-visible bg-[#041d36] text-white sm:mb-24"
-    >
+    <div className="overflow-x-clip">
+      <section
+        id="home"
+        className="relative mb-28 scroll-mt-10 overflow-visible bg-[#041d36] text-white sm:mb-24"
+      >
       {/* Dotted background */}
       <div
         aria-hidden="true"
@@ -330,6 +331,7 @@ function HeroSection() {
         </div>
       </Container>
     </section>
+    </div>
   )
 }
 
