@@ -17,9 +17,23 @@ function Navbar() {
     setIsMenuOpen((currentValue) => !currentValue)
   }
 
-  function closeMenu() {
-    setIsMenuOpen(false)
-  }
+  function handleMobileNavigation(event, href) {
+  event.preventDefault()
+  setIsMenuOpen(false)
+
+  window.setTimeout(() => {
+    const targetSection = document.querySelector(href)
+
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+
+      window.history.replaceState(null, '', href)
+    }
+  }, 300)
+}
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-brand-navy text-white shadow-lg">
@@ -137,7 +151,7 @@ function Navbar() {
           <a
             key={link.label}
             href={link.href}
-            onClick={closeMenu}
+            onClick={(event) => handleMobileNavigation(event, link.href)}
             className="rounded-lg px-3 py-3 text-sm font-medium text-slate-300 transition-colors duration-200 hover:bg-white/10 hover:text-white"
           >
             {link.label}
