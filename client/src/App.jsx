@@ -1,24 +1,22 @@
-import Container from './components/common/Container'
+import Navbar from './components/layout/Navbar'
 
 function App() {
   return (
-    <main className="min-h-screen bg-brand-surface py-20">
-      <Container>
-        <div className="rounded-2xl bg-brand-navy p-10 text-center text-white">
+    <>
+      <Navbar />
+
+      <main id="home" className="min-h-screen bg-brand-surface">
+        <div className="grid min-h-[calc(100vh-72px)] place-content-center px-4 text-center">
           <h1 className="font-display text-4xl font-bold text-brand-blue">
             Afroz Digital Seva
           </h1>
 
-          <p className="mt-3 text-slate-300">
-            All Government and Online Services Under One Roof
-          </p>
-
-          <p className="mt-5 font-handwriting text-3xl text-amber-300">
-            Aapka Kaam Hamari Zimmedari
+          <p className="mt-3 text-brand-muted">
+            Homepage Hero Section Coming Next
           </p>
         </div>
-      </Container>
-    </main>
+      </main>
+    </>
   )
 }
 
