@@ -118,7 +118,7 @@ function Navbar() {
             </button>
           </div>
         </div>
-
+ 
        {/* Mobile navigation */}
 <div
   className={`grid transition-all duration-300 ease-in-out xl:hidden ${
